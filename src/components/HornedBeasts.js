@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
  class HornedBeasts extends Component {
      constructor(){
          super();
          this.state={
-             click:props.click
+             click:0
          }
      }
-     riseBeats=(click)=>{
+     riseBeats=()=>{
         
-         this.state({
+         this.setState({
             click:this.state.click+1
          })
      }
@@ -19,9 +19,11 @@ import React, { Component } from 'react'
         return (
             <div>
                 <h2>{this.props.title}</h2>
-                <img src={this.props.image_url} alt ={this.props.title} width='400px' height='400px'/>
+                <img onClick={()=>{this.riseBeats()}} 
+                src={this.props.image_url} 
+                alt ={this.props.title}
+                 width='400px' height='400px'/>
                 <p>{this.props.description}</p>
-                <img onclick={()=>{this.riseBeats}} src="https://celebrant-reginasmall.com.au/wp-content/uploads/2014/12/heart-icon-300x261.png" width='30px' height='30px'/>
                <p>{this.state.click}</p> 
                   </div>
         )
