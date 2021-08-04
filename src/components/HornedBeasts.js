@@ -48,7 +48,7 @@ class HornedBeasts extends Component {
                     handleClose={this.handleClose}
                     show={this.state.showModal}
                     title={this.props.title}
-                    imgurl={this.props.image_url}
+                    image_url={this.props.image_url}
                     description={this.props.description}
                 />
             </>
