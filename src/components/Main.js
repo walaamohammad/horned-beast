@@ -10,9 +10,9 @@ class Main extends Component {
       <div className="container" fluid>
         <Row>
           {
-            arrayBeast.map((element, index) => {
+            arrayBeast.map(element => {
               return (
-                <Col key={index}>
+                <Col>
                   < HornedBeasts
                     image_url={element.image_url}
                     title={element.title}
