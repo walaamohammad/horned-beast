@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import SelectedBeast from './SelectedBeast'
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import SelectedBeast from './SelectedBeast';
 class HornedBeasts extends Component {
     constructor() {
         super();
