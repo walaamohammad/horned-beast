@@ -7,7 +7,6 @@ class HornedBeasts extends Component {
         super();
         this.state = {
             click: 0,
-            showModal : false,
         }
     }
     riseBeats = () => {
@@ -17,15 +16,12 @@ class HornedBeasts extends Component {
         })
     }
     openModal = () => {
-        this.setState({ showModal: true })
+        this.setState({ modalDisplay: true })
 
     }
     handleClose = () => {
-        this.setState({ showModal: false })
+        this.setState({ modalDisplay: false })
     }
-
- 
-
     render() {
 
         return (
@@ -34,7 +30,7 @@ class HornedBeasts extends Component {
                     <Card.Img variant="top"
                         src={this.props.image_url}
                         alt={this.props.title}
-                        onClick={() => {this.setState({ showModal: true }) }} />
+                        onClick={() => { this.setState({modalDisplay: true }) }} />
 
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
@@ -46,10 +42,8 @@ class HornedBeasts extends Component {
                 </Card>
                 <SelectedBeast
                     handleClose={this.handleClose}
-                    show={this.state.showModal}
-                    title={this.props.title}
-                    image_url={this.props.image_url}
-                    description={this.props.description}
+                    show={this.state.modalDisplay}
+                    SelectedBeast={this.state.SelectedBeast}
                 />
             </>
         )
