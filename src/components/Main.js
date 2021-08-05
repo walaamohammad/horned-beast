@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import HornedBeasts from './HornedBeasts';
 import beastData from './data.json';
-import { Col, Row, Container } from 'react-bootstrap'
+import { Col, Row} from 'react-bootstrap';
 
 class Main extends Component {
   render() {
     let arrayBeast = beastData;
     return (
-      <div className="container" fluid>
+      <div>
         <Row>
           {
-            arrayBeast.map(element => {
+            arrayBeast.map((element ,index) => {
               return (
-                <Col>
+                <Col key='index'>
                   < HornedBeasts
                     image_url={element.image_url}
                     title={element.title}
