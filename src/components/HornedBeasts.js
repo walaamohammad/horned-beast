@@ -4,7 +4,7 @@ class HornedBeasts extends Component {
         super();
         this.state = {
             click: 0,
-          
+
         }
     }
     riseBeats = () => {
@@ -13,6 +13,38 @@ class HornedBeasts extends Component {
             click: this.state.click + 1
         })
     }
+
+    openModal = () => {
+        this.setState({ modalDisplay: true })
+
+    }
+    handleClose = () => {
+        this.setState({ modalDisplay: false })
+    }
+    render() {
+
+        return (
+            <>
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top"
+                        src={this.props.image_url}
+                        alt={this.props.title}
+                        onClick={() => { this.setState({modalDisplay: true }) }} />
+
+                    <Card.Body>
+                        <Card.Title>{this.props.title}</Card.Title>
+                        <Card.Text>
+                            {this.props.description}
+                        </Card.Text>
+                        <Button variant="primary" onClick={() => { this.riseBeats() }} >{this.state.click}</Button>
+                    </Card.Body>
+                </Card>
+                <SelectedBeast
+                    handleClose={this.handleClose}
+                    show={this.state.modalDisplay}
+                    SelectedBeast={this.state.SelectedBeast}
+                />
+            </>
     render() {
 
         return (
@@ -27,6 +59,7 @@ class HornedBeasts extends Component {
                <img src="https://www.pngfind.com/pngs/m/52-526310_free-vector-heart-icon-growing-heart-emoji-hd.png" width='40px' height='30px'/>
 
                   </div>
+
         )
     }
 }
