@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
+class HornedBeasts extends Component {
+    constructor() {
+        super();
+        this.state = {
+            click: 0,
+          
+        }
+    }
+    riseBeats = () => {
 
- class HornedBeasts extends Component {
-     constructor(){
-         super();
-         this.state={
-             click:0
-         }
-     }
-     riseBeats=()=>{
-        
-         this.setState({
-            click:this.state.click+1
-         })
-     }
+        this.setState({
+            click: this.state.click + 1
+        })
+    }
     render() {
 
-       
         return (
             <div>
                 <h2>{this.props.title}</h2>
