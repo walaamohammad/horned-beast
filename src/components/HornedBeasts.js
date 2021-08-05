@@ -25,6 +25,7 @@ import React, { Component } from 'react';
                  width='400px' height='400px'/>
                 <p>{this.props.description}</p>
                <p>{this.state.click}</p> 
+               <img src="https://www.pngfind.com/pngs/m/52-526310_free-vector-heart-icon-growing-heart-emoji-hd.png" width='30px' height='30px'/>
                   </div>
         )
     }
