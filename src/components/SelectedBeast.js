@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React , { Component } from 'react';
 import { Modal,Button } from 'react-bootstrap/';
 
  class SelectedBeast extends Component {
@@ -10,7 +10,7 @@ import { Modal,Button } from 'react-bootstrap/';
           <Modal.Title>{this.props.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-       <img src={this.props.imgurl} alt={this.props.title}/>
+       <img src={this.props.image_url} alt={this.props.title}/>
         <Modal.Text>
         {this.props.description}
         </Modal.Text>

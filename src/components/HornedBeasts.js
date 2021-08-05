@@ -23,8 +23,9 @@ class HornedBeasts extends Component {
                 alt ={this.props.title}
                  width='400px' height='400px'/>
                 <p>{this.props.description}</p>
-               <p>{this.state.click}</p> 
+               <p>{this.state.click}</p>  
                <img src="https://www.pngfind.com/pngs/m/52-526310_free-vector-heart-icon-growing-heart-emoji-hd.png" width='40px' height='30px'/>
+
                   </div>
         )
     }
