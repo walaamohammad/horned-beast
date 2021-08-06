@@ -1,40 +1,34 @@
 import React, { Component } from 'react';
 import HornedBeasts from './HornedBeasts';
-import beastData from './data.json';
-import { Col, Row} from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 class Main extends Component {
   render() {
-    let arrayBeast = beastData;
+
     return (
       <div>
         <Row>
           {
-            arrayBeast.map((element ,index) => {
+            this.props.data.map(item => {
               return (
-                <Col key='index'>
-                  < HornedBeasts
-                    image_url={element.image_url}
-                    title={element.title}
-                    description={element.description}
-                    keyword={element.keyword}
-                    horns={element.horns}
-                  />
 
-                </Col>
-
-
-
+                < HornedBeasts
+                key={item.title}
+                  title={item.title}
+                  image_url={item.image_url}
+                  description={item.description}
+                  keyword={item.keyword}
+                  horns={item.horns}
+                  showModal={this.props.selectedModal}
+                />
               )
             })
           }
-        
-
         </Row>
       </div>
     )
   }
 }
 
-export default Main
+export default Main;
 
