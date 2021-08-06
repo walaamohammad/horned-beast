@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import SelectedBeast from './SelectedBeast';
 class HornedBeasts extends Component {
     constructor() {
         super();
         this.state = {
             click: 0,
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 311e419fadf30dc457067f103ed95406d2c7b743
         }
     }
     riseBeats = () => {
@@ -16,11 +17,17 @@ class HornedBeasts extends Component {
             click: this.state.click + 1
         })
     }
+<<<<<<< HEAD
     clickButton=() =>{
 let data={        
        title:this.props.title,
            image_url :this.props.image_url,
           description:this.props.description,
+=======
+
+    openModal = () => {
+        this.setState({ modalDisplay: true })
+>>>>>>> 311e419fadf30dc457067f103ed95406d2c7b743
 
         }
         this.props.showModal(data)
@@ -46,6 +53,21 @@ let data={
                 </Card>
               
             </>
+    render() {
+
+        return (
+            <div>
+                <h2>{this.props.title}</h2>
+                <img onClick={()=>{this.riseBeats()}} 
+                src={this.props.image_url} 
+                alt ={this.props.title}
+                 width='400px' height='400px'/>
+                <p>{this.props.description}</p>
+               <p>{this.state.click}</p>  
+               <img src="https://www.pngfind.com/pngs/m/52-526310_free-vector-heart-icon-growing-heart-emoji-hd.png" width='40px' height='30px'/>
+
+                  </div>
+
         )
     }
 }
